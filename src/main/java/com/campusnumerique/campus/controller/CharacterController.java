@@ -68,19 +68,18 @@ class MainController {
                                 @ModelAttribute("characterForm") CharacterForm characterForm) throws JSONException {
 
         String name = characterForm.getName();
-        String type = characterForm.getType();
+        String gender = characterForm.getGender();
 
         String url = "http://localhost:8081/character";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         JSONObject characterJsonObject = new JSONObject();
-        characterJsonObject.put("id", characterList().size()+1);
         characterJsonObject.put("name", name);
-        characterJsonObject.put("type", type);
+        characterJsonObject.put("gender", gender);
         HttpEntity<String> request = new HttpEntity<>(characterJsonObject.toString(), headers);
 
         if (name != null && name.length() > 0 //
-                && type != null && type.length() > 0) {
+                && gender != null && gender.length() > 0) {
 
             restTemplate.postForObject(url, request, Character.class);
 

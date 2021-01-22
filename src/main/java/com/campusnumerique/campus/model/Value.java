@@ -7,7 +7,7 @@ public class Value {
 
     private Integer id;
     private String name;
-    private String type;
+    private String gender;
 
     public Value() {
     }
@@ -28,12 +28,12 @@ public class Value {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public String getGender() {
+        return gender;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class Value {
         return "Character{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", type='" + type + '\'' +
+                ", gender='" + gender + '\'' +
                 '}';
     }
 }

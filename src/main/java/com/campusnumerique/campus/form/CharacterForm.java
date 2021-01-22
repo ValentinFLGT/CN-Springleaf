@@ -3,7 +3,7 @@ package com.campusnumerique.campus.form;
 public class CharacterForm {
 
     private String name;
-    private String type;
+    private String gender;
 
     public String getName() {
         return name;
@@ -13,11 +13,11 @@ public class CharacterForm {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public String getGender() {
+        return gender;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
